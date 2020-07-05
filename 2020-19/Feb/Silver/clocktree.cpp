@@ -45,6 +45,7 @@ int N,a[2501],clocks[2501],ans;
 bool vis[2501];
 vi adj[2501];
 
+// helper function to reset the clocks to their original positions when dfs each starting node
 void resetClocks(){
     for(int i=1;i<=N;++i){
         clocks[i]=a[i];
