@@ -88,7 +88,7 @@ int main() {
     int ans2=0;
     for(int i=0;i<N;++i){
         for(int j=1;j<N;++j){
-            if(grid[i][j]!=grid[i-1][j]){
+            if(grid[i][j]!=grid[i][j-1]){
                 memset(vis, 0, sizeof(vis));
                 int x=ff2(i,j,grid[i][j],grid[i][j-1]);
                 ans2=max(ans2,x);
