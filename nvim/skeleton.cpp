@@ -55,9 +55,9 @@ typedef vector<pdd> vpdd;
 template<class T> using min_heap=pqueue<T, vector<T>, greater<T>>;
 template<class T> using oset=tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
-template<class T> bool ckmin(T& a, const T& b) { 
+template<class T> bool umin(T& a, const T& b) { 
     return b < a ? a = b, 1 : 0; }
-template<class T> bool ckmax(T& a, const T& b) { 
+template<class T> bool umax(T& a, const T& b) { 
     return a < b ? a = b, 1 : 0; } 
 
 
