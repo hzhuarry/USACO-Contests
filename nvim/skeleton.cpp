@@ -65,7 +65,7 @@ template<class T> void read(T& x) {
     cin >> x;
 }
 template<class H, class T> void read(pair<H, T>& p) {
-    cin >> p.fi >> p.se;
+    cin >> p.f >> p.s;
 }
 template<class T> void read(vector<T>& v) {
     trav(i, v)
