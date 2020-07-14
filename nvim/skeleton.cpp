@@ -60,7 +60,7 @@ template<class T> bool umin(T& a, const T& b) {
 template<class T> bool umax(T& a, const T& b) { 
     return a < b ? a = b, 1 : 0; } 
 
-//Read Input
+//Read In
 template<class T> void read(T& x) {
     cin >> x;
 }
@@ -83,6 +83,11 @@ template<class H, class... T> void read(H& h, T&... t) {
     read(h);
     read(t...);
 }
+//Write Out
+template<class T> void write(T x) {
+    cout << x;
+}
+
 
 void fileIO(string filename) {
     freopen((filename+".in").c_str(), "r", stdin);
