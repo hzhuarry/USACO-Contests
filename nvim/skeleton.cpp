@@ -58,74 +58,6 @@ template<class T> bool ckmin(T& a, const T& b) {
 template<class T> bool ckmax(T& a, const T& b) { 
     return a < b ? a = b, 1 : 0; } 
 
-//Read/Write
-template<class T> void read(T& x) {
-    cin >> x;
-}
-template<class H, class T> void read(pair<H, T>& p) {
-    cin >> p.fi >> p.se;
-}
-template<class T> void read(vector<T>& v) {
-    trav(i, v)
-        read(i);
-}
-template<class H, class... T> void read(H& h, T&... t) {
-    read(h);
-    read(t...);
-}
-
-string to_string(char c) {
-    return string(1, c);
-}
-string to_string(string s) {
-    return s;
-}
-string to_string(const char* s) {
-    return string(s);
-}
-string to_string(bool b) {
-    return b?"1":"0";
-}
-template<class T> string to_string(vector<T>& v) {
-    string ans="";
-    bool f=0;
-    trav(i, v) {
-        if (f)
-            ans.pb(' ');
-        f=1;
-        ans.append(to_string(i));
-    }
-    return ans;
-}
-template<class H, class T> string to_string(vector<pair<H, T>>& v) {
-    string ans="";
-    bool f=0;
-    trav(p, v) {
-        if (f)
-            ans.pb('\n');
-        ans.append(to_string(p.fi)+' '+to_string(p.se));
-        f=1;
-    }
-    return ans;
-}
-
-template<class T> void write(T x) {
-    cout << to_string(x);
-}
-template<class H, class... T> void write(const H& h, const T&... t) {
-    write(h);
-    write(t...);
-}
-
-void print() {
-    write('\n');
-}
-template<class H, class... T> void print(const H& h, const T&... t) {
-    write(h);
-    if (sizeof...(t))
-        write(' ');
-    print(t...);
-}
 
 struct DSU{
     vi parent,size;
@@ -173,9 +105,6 @@ int main() {
     cin.tie(0);
     cout<<fixed<<setprecision(12);
     //setIO("");
-    int t; read(t);
-    while(t--){
-         ;
-    }
+    
     return 0;
 }
