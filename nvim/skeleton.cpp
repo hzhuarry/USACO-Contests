@@ -60,6 +60,29 @@ template<class T> bool umin(T& a, const T& b) {
 template<class T> bool umax(T& a, const T& b) { 
     return a < b ? a = b, 1 : 0; } 
 
+//Read Input
+template<class T> void read(T& x) {
+    cin >> x;
+}
+template<class H, class T> void read(pair<H, T>& p) {
+    cin >> p.fi >> p.se;
+}
+template<class T> void read(vector<T>& v) {
+    trav(i, v)
+        read(i);
+}
+template<class A, size_t S> void read(array<A, S>& x) {
+	EACH(a, x)
+		read(a);
+}
+template<class T> void read(T a[], int n) {
+    FOR(n) 
+      read(a[i]);
+}
+template<class H, class... T> void read(H& h, T&... t) {
+    read(h);
+    read(t...);
+}
 
 void fileIO(string filename) {
     freopen((filename+".in").c_str(), "r", stdin);
