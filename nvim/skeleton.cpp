@@ -22,7 +22,7 @@ using namespace __gnu_pbds;
 #define umap unordered_map
 #define uset unordered_set
 #define pqueue priority_queue
-#define arr array
+#define ar array
 
 #define for_base(i, a, b, x) for (int i=(a); ((a)<(b))?i<(b):i>(b); ((a)<(b))?i+=(x):i-=(x))
 #define FOR1(a) for_base(i, 0, a, 1)
