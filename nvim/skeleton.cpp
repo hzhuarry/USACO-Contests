@@ -5,7 +5,7 @@ using namespace std;
 using namespace __gnu_pbds;
 
 #define endl "\n"
-#define push_back pb
+#define pb push_back
 #define mp make_pair 
 #define f first
 #define s second
