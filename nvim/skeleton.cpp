@@ -72,8 +72,8 @@ template<class T> void read(vector<T>& v) {
         read(i);
 }
 template<class A, size_t S> void read(array<A, S>& x) {
-	EACH(a, x)
-		read(a);
+    trav(a, x)
+	read(a);
 }
 template<class T> void read(T a[], int n) {
     FOR(n) 
