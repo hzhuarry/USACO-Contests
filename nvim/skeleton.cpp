@@ -11,7 +11,10 @@ using namespace __gnu_pbds;
 #define s second
 #define sz(x) (int)x.size()
 #define all(x) begin(x), end(x)
+#define alla(x,n) x,x+n
 #define rall(x) (x).rbegin(), (x).rend() 
+#define Sort(x) sort(all(x))
+#define Sorta(x,n) sort(alla(x,n))
 #define rsz resize
 #define ins insert 
 #define lb lower_bound
@@ -49,7 +52,6 @@ typedef vector<pii> vpii;
 typedef vector<pll> vpll;
 typedef vector<pld> vpld;
 typedef vector<pdd> vpdd;
-
 template<class T> using min_heap=pqueue<T, vector<T>, greater<T>>;
 template<class T> using oset=tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
