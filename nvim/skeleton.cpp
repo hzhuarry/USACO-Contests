@@ -5,6 +5,7 @@ using namespace std;
 using namespace __gnu_pbds;
 
 #define endl "\n"
+#define push_back pb
 #define mp make_pair 
 #define f first
 #define s second
@@ -56,7 +57,8 @@ template<class T> bool ckmin(T& a, const T& b) {
     return b < a ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { 
     return a < b ? a = b, 1 : 0; } 
-//Read/
+
+//Read/Write
 template<class T> void read(T& x) {
     cin >> x;
 }
@@ -64,7 +66,7 @@ template<class H, class T> void read(pair<H, T>& p) {
     cin >> p.fi >> p.se;
 }
 template<class T> void read(vector<T>& v) {
-    in(i, v)
+    trav(i, v)
         read(i);
 }
 template<class H, class... T> void read(H& h, T&... t) {
@@ -87,7 +89,7 @@ string to_string(bool b) {
 template<class T> string to_string(vector<T>& v) {
     string ans="";
     bool f=0;
-    in(i, v) {
+    trav(i, v) {
         if (f)
             ans.pb(' ');
         f=1;
@@ -98,7 +100,7 @@ template<class T> string to_string(vector<T>& v) {
 template<class H, class T> string to_string(vector<pair<H, T>>& v) {
     string ans="";
     bool f=0;
-    in(p, v) {
+    trav(p, v) {
         if (f)
             ans.pb('\n');
         ans.append(to_string(p.fi)+' '+to_string(p.se));
