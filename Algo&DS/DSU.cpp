@@ -1,8 +1,10 @@
 
 struct DSU{
     vi parent,size;
+    int cmp;
     void init(int N){
         parent.resize(N),size.resize(N);
+        cmp=N;
         for(int i=0;i<N;++i){
             parent[i]=i;
             size[i]=1;
@@ -15,6 +17,9 @@ struct DSU{
     int set_size(int x){
         return size[find_set(x)];
     }
+    int num_cmp(){
+        return cmp;
+    }
     bool same_set(int a,int b){
         return find_set(a)==find_set(b);
     }
@@ -26,6 +31,7 @@ struct DSU{
                 swap(a, b);
             parent[b] = a;
             size[a] += size[b];
+            cmp--;
         }
     }
 };
