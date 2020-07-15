@@ -24,7 +24,7 @@ using namespace __gnu_pbds;
 #define pqueue priority_queue
 #define ar array
 
-#define for_base(i, a, b, x) for (int i=(a); ((a)<(b))?i<(b):i>(b); ((a)<(b))?i+=(x):i-=(x))
+#define for_base(i, a, b, x) for (int i=((a)<(b))?(a):(a)-1; ((a)<(b))?i<(b):i>=(b); ((a)<(b))?i+=(x):i-=(x))
 #define FOR1(a) for_base(i, 0, a, 1)
 #define FOR2(i, a) for_base(i, 0, a, 1)
 #define FOR3(i, a, b) for_base(i, a, b, 1)
