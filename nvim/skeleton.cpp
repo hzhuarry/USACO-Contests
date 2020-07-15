@@ -77,7 +77,11 @@ template<class A, size_t S> void read(array<A, S>& x) {
 }
 template<class T> void read(T a[], int n) {
     FOR(n) 
-      read(a[i]);
+	read(a[i]);
+}
+template<class T> void read(T a[][], int n, int m) {
+    FOR(n)
+	read(a[i], m);
 }
 template<class H, class... T> void read(H& h, T&... t) {
     read(h);
