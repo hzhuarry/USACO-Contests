@@ -23,6 +23,9 @@ struct DSU{
     bool same_set(int a,int b){
         return find_set(a)==find_set(b);
     }
+    int get_sz(int x){
+        return size[find(x)];
+    }
     void merge(int a, int b) {
         a = find_set(a);
         b = find_set(b);
