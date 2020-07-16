@@ -137,13 +137,16 @@ int main() {
         queries[i][2]=i;
     }
     sort(alla(queries,Q)); sort(alla(videos,N-1));
+    //process queries offline in decreasing order
     reverse(alla(queries,Q)); reverse(alla(videos,N-1));
+    
     int j=0;
     D.init(N);
     FOR(Q){
         int k=queries[i][0], v=queries[i][1],index=queries[i][2];
         while(j<N-1&&videos[j][0]>=k){
             //we have a zero-base index
+            //merge if the relevance is higher than or equal to the current k-value
             D.merge(videos[j][1]-1,videos[j][2]-1);
             ++j;
         }
